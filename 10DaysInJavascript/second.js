@@ -7,3 +7,17 @@ function performOperation(secondInteger, secondDecimal, secondString) {
     console.log(firstString + secondString);
     
 }
+const readline = require("readline");
+const rl = readline.createInterface(process.stdin, process.stdout);
+rl.question("", (secondInt) => {
+    rl.setPrompt("");
+    rl.prompt();
+    rl.on("line", (secondDecimal)=> {
+        rl.setPrompt("");
+        rl.prompt();
+        rl.on("line", (secondString)=> {
+            performOperation(secondInt, secondDecimal, secondString);
+            rl.close();
+        });
+    });
+});
