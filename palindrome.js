@@ -9,7 +9,7 @@ function intToComplete(str){
     }
     myarr.reverse()
     return arrayToInt(myarr);
-}
+};
 
 function arrayToInt(arr){
     var mystr = '';
@@ -17,4 +17,4 @@ function arrayToInt(arr){
         mystr += arr[k];
     };
     return parseInt(mystr);
-}
+};
